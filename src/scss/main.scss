@@ -1,7 +1,175 @@
-$font-size: 5rem;
-$font-color: red;
+@import '~reset-css-complete/reset.css';
 
-html {
-  font-size: $font-size;
-  color: $font-color;
+$bg-color:rgb(169, 179, 165);
+$border-color:rgb(141, 181, 128);
+
+body{
+  background-color: $bg-color;
+  font-size: 10px;
 }
+
+.form {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 50px 80px;
+  background-color: white;
+  border-radius: 50px;
+  border: 2px solid $border-color;
+  box-shadow: 10px 10px 5px $border-color;
+
+  &__name{
+    clear: both;
+    font-size: 4.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__item{
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  &__label{
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+
+  &__input{
+    border: 0.5px rgb(116, 116, 116) solid;
+    padding: 5px 10px;
+    outline: none;
+    width: 80%;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+
+    &:focus{
+      border: none;
+      outline: 0.5px black solid;
+      box-shadow: 5px 5px 2px $border-color;
+    }
+  }
+
+  &__btns{
+    display: flex;
+    gap: 20px;
+  }
+
+  &__btn {
+    font-size: 2em;
+    border: 0.5px rgb(116, 116, 116) solid;
+    padding: 5px 10px;
+    background-color: $bg-color;
+    color: white;
+
+    &:hover{
+      background-color: rgb(146, 159, 141);
+    }
+  }
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.remove{
+  border: 2px red solid;
+  outline: 2px red solid;
+  &:focus{
+    border: 2px red solid;
+    outline: 2px red solid;
+  }
+}
+
+.msgGood{
+  font-size: 1.6em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(71, 188, 71);
+  margin-bottom: 5px;
+}
+
+.openbtn{
+    display: block;
+    float: right;
+    font-size: 2em;
+    border: 0.5px rgb(116, 116, 116) solid;
+    padding: 5px 10px;
+    background-color: rgb(169, 179, 165);
+    color: white;
+
+    &:hover{
+      background-color: rgb(146, 159, 141);
+    }
+}
+
+.modal {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  left:0%;
+  bottom: 0%;
+  background: rgba(169, 179, 165, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+
+  &:target{
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+  }
+
+  &__dialog {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $bg-color;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+  }
+
+  &__close {
+    position: relative;
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.7;
+
+    &:focus, &:hover{
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .75;
+    }
+  }
+
+  &__text{
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+  }
+}
+
+.non-scroll{
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+

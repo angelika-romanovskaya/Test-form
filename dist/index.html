@@ -1,1 +1,47 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simple form</title><script defer="defer" src="index.2a606b585636685ee207.js"></script><link href="main.77ce8bdd7579394c7d31.css" rel="stylesheet"></head><body><p>Файл создан плагином html-webpack-plugin</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple form</title>
+<script defer src="index.8de4e2e8cb01fd153ade.js"></script><link href="main.d8fec2321738fc1be2b5.css" rel="stylesheet"></head>
+<body>
+    <div id="openModal" class="modal">
+        <div class="modal__dialog">
+            <a href="#close" title="Close" class="modal__close">×</a>
+            <p class="modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur id ullam reprehenderit officiis animi voluptas expedita veniam soluta numquam facere, placeat veritatis velit qui fuga ex recusandae quas impedit perferendis?</p>
+        </div>
+    </div>
+    <form class="form">
+        <a class="openbtn" href="#openModal">Открыть</a>
+        <h1 class="form__name">Форма обратной связи</h1>
+        <p class="msgGood"></p>
+        <div class="wrap">
+            <div class="form__item wrap__item">
+                <label class="form__label" for="name">Имя</label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Введите имя">
+                <p></p>
+            </div>
+            <div class="form__item wrap__item">
+                <label class="form__label" for="email">E-mail</label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+                <p></p>
+            </div>
+            <div class="form__item wrap__item">
+                <label class="form__label" for="phone">Телефон</label>
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="Введите номер телефона">
+                <p></p>
+            </div>
+            <div class="form__item wrap__item">
+                <label class="form__label" for="massage">Сообщение</label>
+                <textarea class="form__input" name="massage" id="massage" cols="23" rows="5" placeholder="Введите ваше сообщение"></textarea>
+                <p></p>
+            </div>
+            <div class="form__btns">
+                <button class="form__btn" type="submit">Отправить</button>
+                <button class="form__btn" type="reset">Очистить</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
