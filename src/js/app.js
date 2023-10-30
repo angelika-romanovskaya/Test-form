@@ -9,6 +9,7 @@ let form = document.querySelector('.form');
 let msgGood = document.querySelector(".msgGood")
 
 var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
+let scrollPosition = window.pageYOffset;
 
 im.mask(phoneInput);
 
